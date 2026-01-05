@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./assets/weather.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="card">
+      <h1>Weather App</h1>
+
+      <!-- Search -->
+      <div class="search-container">
+        <input type="text" id="searchBox" placeholder="Enter City Name" />
+        <button id="searchButton">
+          <img src="https://cdn-icons-png.flaticon.com/512/751/751463.png" />
+        </button>
+      </div>
+
+      <!-- Error (hidden by default) -->
+      <p class="error-message" id="errorMessage">Invalid City Name</p>
+
+      <!-- Weather Info (hidden by default) -->
+      <div class="weather-info" id="weatherInfo">
+        <div class="weather-icon">
+          <img
+            id="weatherIcon"
+            src="https://cdn-icons-png.flaticon.com/512/1163/1163661.png"
+          />
+        </div>
+
+        <div id="cityName">Your City</div>
+        <div class="temperature" id="temperature">25°C</div>
+
+        <div class="bottom-info">
+          <div class="info-box">
+            <span class="label">Humidity</span>
+            <img src="https://cdn-icons-png.flaticon.com/512/728/728093.png" />
+            <span id="humidity">60%</span>
+          </div>
+          <div class="info-box">
+            <span class="label">Wind Speed</span>
+
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/5532/5532989.png"
+            />
+            <span id="wind">12 km/h</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="App.js"></script>
+  </body>
+</html>

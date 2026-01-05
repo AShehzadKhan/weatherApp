@@ -1,0 +1,159 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #6dd5ed, #2193b0);
+  padding: 1rem;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 350px;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #2193b0;
+  text-align: center;
+}
+
+.search-container {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+#searchBox {
+  flex: 1;
+  padding: 10px 15px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1rem;
+  transition: border 0.2s ease;
+}
+
+#searchBox:focus {
+  border-color: #2193b0;
+}
+
+#searchButton {
+  background: #2193b0;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+#searchButton:hover {
+  background: #176f85;
+}
+#searchButton img {
+  width: 20px;
+  height: 20px;
+}
+
+.error-message {
+  margin-top: 10px;
+  color: red;
+  font-size: 0.9rem;
+  display: none;
+}
+
+.weather-info {
+  margin-top: 20px;
+  text-align: center;
+  display: none;
+  width: 100%;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.weather-icon img {
+  width: 80px;
+  height: 80px;
+}
+
+#cityName {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 5px;
+  color: #333;
+}
+
+.temperature {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.bottom-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  gap: 15px;
+}
+
+.info-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f4f4f4;
+  border-radius: 12px;
+  padding: 8px;
+}
+
+.info-box img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+
+.label {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 3px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 400px) {
+  .temperature {
+    font-size: 2rem;
+  }
+  .weather-icon img {
+    width: 60px;
+    height: 60px;
+  }
+}
